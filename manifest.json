@@ -1,0 +1,22 @@
+{
+    "name": "My RSS Reader",
+    "version": "1.0",
+    "description": "RSS in NewTab By Alireza Afzalaghaei",
+    "manifest_version": 2,
+    "chrome_url_overrides": {
+        "newtab": "MyRssReader.html"
+    },
+    "icons": {
+        "16": "images/16.png",
+        "48": "images/48.png",
+        "128": "images/128.png"
+    },
+    "permissions": [
+		"*://*/*",
+		"tabs"
+    ],
+    "content_scripts": [{
+        "js": ["scripts/jquery.js", "scripts/script.js"],
+        "matches": ["file:///*MyRssReader.html"]
+    }]
+}
